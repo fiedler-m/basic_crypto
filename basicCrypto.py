@@ -10,7 +10,6 @@ class Block:
         self.data = data
         self.timestamp = timestamp or time.time()
 
-    @property
     def calculate_hash(self):
         block_of_string = "{}{}{}{}{}".format(self.index, self.proof_num,
                                               self.prev_hash, self.data,
